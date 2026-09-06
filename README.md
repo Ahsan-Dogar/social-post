@@ -6,6 +6,7 @@
 
 **Generate platform-native social media posts for LinkedIn, Twitter/X, Instagram, Facebook, Reddit, and LINE in seconds.** A production-ready, self-hostable Next.js SaaS boilerplate with live platform mockups, multi-tone generation, publish intents, and built-in Stripe billing. A free open-source alternative to **Buffer AI, Jasper Social, Hootsuite OwlyWriter, Publer, and Copy.ai**.
 
+[![CI](https://github.com/Ahsan-Dogar/social-post/actions/workflows/ci.yml/badge.svg)](https://github.com/Ahsan-Dogar/social-post/actions/workflows/ci.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)]()
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)]()
 [![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)]()
