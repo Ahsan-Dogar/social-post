@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,8 +22,13 @@ jobs:
           node-version: 20
           cache: npm
 
+      - name: Prepare env
+        run: |
+          cp .env.example .env.local
+          sed -i 's|\[password\]|ci-dummy-password|; s|your_secure_mu_api_key|ci-dummy-key|; s|stripe_secret_key|sk_test_ci|; s|stripe_publishable_key|pk_test_ci|; s|stripe_webhook_secret|whsec_ci|; s|use_a_secure_random_string|ci-secret-1234567890|; s|google_client_id_from_google_developer_console|ci-client-id|; s|google_client_secret_from_google_developer_console|ci-client-secret|; s|your_ngrok_or_public_domain_url|http://localhost:3000|' .env.local
+
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
+      - name: Build
+        run: npm run build
